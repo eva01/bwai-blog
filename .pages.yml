@@ -13,7 +13,14 @@ content:
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
       - { name: author, label: Author, type: string }
-      - { name: category, label: Category, type: select, options: [Tutorial, News, Opinion, Project] }
+      - name: category
+        label: Category
+        type: select
+        options:
+          - { label: Tutorial, value: tutorial }
+          - { label: News, value: news }
+          - { label: Opinion, value: opinion }
+          - { label: Project, value: project }
       - { name: featured, label: Featured, type: boolean }
       - { name: body, label: Body, type: rich-text }
   - name: about
