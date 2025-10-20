@@ -44,16 +44,26 @@
 html,
 body {
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	width: 100%;
 }
 html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	min-height: 100vh;
+}
+body > header,
+body > main,
+body > footer {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: clamp(1.25rem, 4vw, 3rem);
+	padding-right: clamp(1.25rem, 4vw, 3rem);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -90,7 +100,8 @@ a[href]:active {
 }
 
 main {
-	padding: 1rem;
+	padding-top: clamp(1.5rem, 5vw, 3rem);
+	padding-bottom: clamp(2rem, 6vw, 4rem);
 }
 main :first-child {
 	margin-top: 0;
@@ -148,7 +159,8 @@ header {
 	gap: 1em .5em;
 	flex-wrap: wrap;
 	align-items: center;
-	padding: 1em;
+	padding-top: clamp(1.5rem, 4vw, 2.5rem);
+	padding-bottom: clamp(1.2rem, 3.5vw, 2.2rem);
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */

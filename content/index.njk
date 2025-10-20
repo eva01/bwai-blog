@@ -3,7 +3,7 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 3
+numberOfLatestPostsToShow: 5
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -17,7 +17,7 @@ numberOfLatestPostsToShow: 3
 		<h1 class="showcase-hero__title">Build With AI</h1>
 		<p class="showcase-hero__lede">We’re a grassroots collective shipping open builds, sharing prompts, and remixing ideas across Malaysia and beyond.</p>
 		<div class="showcase-hero__cta">
-			<a class="showcase-button showcase-button--primary" href="/blog/">Browse latest drops</a>
+			<a class="showcase-button showcase-button--ghost" href="/blog/">Browse latest drops</a>
 			<a class="showcase-button showcase-button--ghost" href="/about/">Learn about BWAI</a>
 		</div>
 	</div>
