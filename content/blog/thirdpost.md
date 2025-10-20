@@ -3,6 +3,7 @@ title: 3D Printing Order Platform
 description: https://www.3DForger.online/
 date: 2025-10-21
 draft: false
+author: Bruce Mui
 category: Project
 featured: false
 ---
