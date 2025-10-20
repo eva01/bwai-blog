@@ -1,17 +1,24 @@
 ---
-title: This is my second post with a much longer title.
-description: This is a post on My Blog about leveraging agile frameworks.
-date: 2018-07-04
+title: Playdate Marketplace
+description: https://venue-play-dates.lovable.app
+date: 2025-10-21
+draft: false
 tags:
-  - number 2
+  - Pascal
+author: Pascal
+category: Project
+featured: false
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Play Dates for your child(ren) are one way to help them develop social experiences that supersede an $100M ARR AI startup.
 
-## Section Header
+It helps them to create new memories with their new friend(s), with their parents. And for parents to unleash their own potential (when was the last time you hang on a monkey bar?) through shared experiences with their child.
 
-<a href="/blog/firstpost/">First post</a>
-<a href="/blog/thirdpost/">Third post</a>
+Host a playdate?
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Join a playdate?
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Become a host for playdates?
+
+Become a venue for playdates?
+
+The revolution starts now: [https://venue-play-dates.lovable.app](https://venue-play-dates.lovable.app)
