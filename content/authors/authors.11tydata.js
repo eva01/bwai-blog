@@ -2,6 +2,6 @@ module.exports = {
 	tags: [
 		"authors"
 	],
-	"layout": false,
-	"permalink": false
+	layout: false,
+	permalink: false
 };
