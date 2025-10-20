@@ -1,77 +1,33 @@
-# media: public/img
-# content:
-#   - name: posts
-#     label: Posts
-#     type: collection
-#     path: content/blog
-#     view:
-#       fields: [ title, draft, date ]
-#     fields:
-#       - { name: title, label: Title, type: string, required: true }
-#       - { name: description, label: Description, type: string }
-#       - { name: date, label: Date, type: date }
-#       - { name: draft, label: Draft, type: boolean }
-#       - { name: tags, label: Tags, type: string, list: true }
-#       - { name: body, label: Body, type: rich-text }
-#   - name: about
-#     label: About page
-#     type: file
-#     path: content/about/index.md
-#     fields:
-#       - { name: layout, type: string, hidden: true, default: layouts/base.njk }
-#       - name: eleventyNavigation
-#         label: Navigation
-#         type: object
-#         fields:
-#           - { name: key, label: Key, type: string }
-#           - { name: order, label: Order, type: number }
-#       - { name: body, label: Body, type: rich-text }
-#   - name: metadata
-#     label: Metadata
-#     type: file
-#     path: _data/metadata.js
-#     format: code
-media:
-  input: src/media
-  output: /media
+media: public/img
 content:
   - name: posts
     label: Posts
     type: collection
-    path: 'src/posts'
+    path: content/blog
     view:
-      fields: [ title, published, date ]
+      fields: [ title, draft, date ]
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
-      - name: title
-        label: Title
-        type: string
-      - name: body
-        label: Body
-        type: rich-text
-  - name: site
-    label: Site settings
-    path: src/_data/site.json
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: body, label: Body, type: rich-text }
+  - name: about
+    label: About page
     type: file
+    path: content/about/index.md
     fields:
-      - name: title
-        label: Website title
-        type: string
-      - name: description
-        label: Website description
-        type: string
-        description: Will be provused for any page with no description.
-      - name: url
-        label: Website URL
-        type: string
-        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
-      - name: cover
-        label: Preview image
-        type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+      - { name: body, label: Body, type: rich-text }
+  - name: metadata
+    label: Metadata
+    type: file
+    path: _data/metadata.js
+    format: code
