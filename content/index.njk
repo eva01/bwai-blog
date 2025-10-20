@@ -7,16 +7,136 @@ numberOfLatestPostsToShow: 3
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
-
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
+
+<section class="showcase-hero">
+	<div class="showcase-hero__content">
+		<p class="showcase-eyebrow">Community AI Vibe</p>
+		<h1 class="showcase-hero__title">Build With AI showcases collaborative experiments and coding energy.</h1>
+		<p class="showcase-hero__lede">We’re a grassroots collective shipping open builds, sharing prompts, and remixing ideas across Malaysia and beyond. Explore what the community is crafting with Eleventy, Cloudflare, and generous splashes of neon imagination.</p>
+		<div class="showcase-hero__cta">
+			<a class="showcase-button showcase-button--primary" href="/blog/">Browse latest drops</a>
+			<a class="showcase-button showcase-button--ghost" href="/about/">Learn about BWAI</a>
+		</div>
+	</div>
+	<div class="showcase-hero__visual" aria-hidden="true">
+		<div class="showcase-orbit">
+			<div class="showcase-orbit__ring"></div>
+			<div class="showcase-orbit__ring"></div>
+			<div class="showcase-orbit__ring"></div>
+			<div class="showcase-orbit__node" style="top: 12%; left: 32%;" data-label="Eleventy"></div>
+			<div class="showcase-orbit__node" style="bottom: 18%; right: 28%;" data-label="Cloudflare"></div>
+			<div class="showcase-orbit__node" style="top: 48%; right: 8%;" data-label="Page-CMS"></div>
+			<div class="showcase-orbit__core"><span>BWAI</span></div>
+		</div>
+	</div>
+</section>
+
+<section class="showcase-section showcase-section--condensed">
+	<header class="showcase-section__header">
+		<p class="showcase-section__eyebrow">Why this stack</p>
+		<h2 class="showcase-section__title">Optimised for fast drops, community edits, and dazzling performance.</h2>
+		<p class="showcase-section__lede">Eleventy powers our markdown-first workflow, Page-CMS keeps contributors in flow, and Cloudflare Pages ships updates at hyperspeed.</p>
+	</header>
+	<div class="showcase-feature-grid">
+		<article class="showcase-feature-card">
+			<h3>Eleventy + Markdown</h3>
+			<p>Accessible static tooling that lets contributors focus on ideas while the generator handles structure, data, and templating flexibility.</p>
+			<p class="showcase-feature-meta">Lightning builds · Flexible collections</p>
+		</article>
+		<article class="showcase-feature-card">
+			<h3>Page-CMS integration</h3>
+			<p>Editors drop content cubes straight into the pipeline—no git anxiety required. Draft toggles and custom fields keep experiments organised.</p>
+			<p class="showcase-feature-meta">Human friendly · Editor ready</p>
+		</article>
+		<article class="showcase-feature-card">
+			<h3>Cloudflare Pages</h3>
+			<p>Global edge deployment with zero-config CI. Each neon launch brings responsive images, feeds, and sitemap updates automatically.</p>
+			<p class="showcase-feature-meta">Worldwide · Instant rollbacks</p>
+		</article>
+	</div>
+</section>
+
+<section class="showcase-section">
+	<header class="showcase-section__header">
+		<p class="showcase-section__eyebrow">Latest drops</p>
+		<h2 class="showcase-section__title">Fresh posts from the BWAI lab.</h2>
+		<p class="showcase-section__lede">Catch the most recent {{ latestPostsCount }} release{% if latestPostsCount != 1 %}s{% endif %}, hand-coded and neon charged by the community.</p>
+	</header>
+
+	<div class="showcase-posts">
+		{% include "postslist.njk" %}
+		{% if morePosts > 0 %}
+		<p class="showcase-more">{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} await in <a href="/blog/">the archive</a>.</p>
+		{% endif %}
+	</div>
+</section>
+
+<section class="showcase-section">
+	<header class="showcase-section__header">
+		<p class="showcase-section__eyebrow">Inside the build</p>
+		<h2 class="showcase-section__title">Architecture, creation flow, and upgrade beacons.</h2>
+		<p class="showcase-section__lede">Peek into how the platform stays modular yet community-proud, from content architecture to future enhancements.</p>
+	</header>
+
+	<div class="showcase-grid--two">
+		<article class="showcase-card">
+			<h3>Architecture overview</h3>
+			<ul>
+				<li>Content lives in <code>content/</code>, layouts reside in <code>_includes/</code>, and shared data flows through <code>_data/</code>.</li>
+				<li>Responsive image optimisation, navigation plugin, and RSS feeds run out of the box.</li>
+				<li>Draft workflow keeps in-progress pieces out of production builds until they’re ready to glow.</li>
+			</ul>
+		</article>
+		<article class="showcase-card">
+			<h3>Creation pipeline</h3>
+			<ul>
+				<li>Collaborators ideate scenes, capture prompts, and slot entries via Page-CMS.</li>
+				<li>Eleventy regenerates the showcase, Cloudflare Pages launches the update globally.</li>
+				<li>Analytics and accessibility checks ensure each drop levels up community impact.</li>
+			</ul>
+		</article>
+	</div>
+</section>
+
+<section class="showcase-section">
+	<header class="showcase-section__header">
+		<p class="showcase-section__eyebrow">Roadmap highlights</p>
+		<h2 class="showcase-section__title">Beaconing what’s next.</h2>
+		<p class="showcase-section__lede">We’re charting new territory with analytics, internationalisation, and richer author experiences.</p>
+	</header>
+	<div class="showcase-roadmap">
+		<ul class="showcase-roadmap__list">
+			<li class="showcase-roadmap__item">
+				<strong>Cloudflare analytics pulse</strong>
+				<span>Activate privacy-friendly insights to measure how far the neon reaches.</span>
+			</li>
+			<li class="showcase-roadmap__item">
+				<strong>Expanded CMS models</strong>
+				<span>Launch author spotlights, build series templates, and community project submission flows.</span>
+			</li>
+			<li class="showcase-roadmap__item">
+				<strong>Internationalisation</strong>
+				<span>Prototype multilingual content paths so every voice can join the chorus.</span>
+			</li>
+			<li class="showcase-roadmap__item">
+				<strong>Security & CSP enhancements</strong>
+				<span>Introduce tighter policies while keeping bundled assets smooth.</span>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="showcase-cta">
+	<h2>Bring your neon idea to life with BWAI.</h2>
+	<p>Whether you’re scripting a prompt, designing a vibe-heavy illustration, or deploying a showcase app, we want you in the mix. Drop your concept and let’s build it together.</p>
+	<div class="showcase-cta__actions">
+		<a class="showcase-button showcase-button--primary" href="https://discord.gg/">Join the community</a>
+		<a class="showcase-button showcase-button--ghost" href="/blog/">Read the archive</a>
+	</div>
+</section>
 
 {# List every content page in the project #}
 {#
