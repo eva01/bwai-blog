@@ -17,10 +17,11 @@ content:
         label: Category
         type: select
         options:
-          - { label: Tutorial, value: tutorial }
-          - { label: News, value: news }
-          - { label: Opinion, value: opinion }
-          - { label: Project, value: project }
+          values:
+            - Tutorial
+            - News
+            - Opinion
+            - Project
       - { name: featured, label: Featured, type: boolean }
       - { name: body, label: Body, type: rich-text }
   - name: about
