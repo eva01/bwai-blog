@@ -3,6 +3,8 @@ title: Creative Agency Directory
 description: https://creative-atlas-my.lovable.app/
 date: 2025-10-23
 draft: false
+tags:
+  - Zahin S.
 author: Zahin S.
 category: Project
 featured: false
